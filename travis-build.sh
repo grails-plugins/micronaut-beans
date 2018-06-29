@@ -7,6 +7,12 @@ EXIT_STATUS=0
 echo "Publishing artifact for branch $TRAVIS_BRANCH"
 if [[ -n $TRAVIS_TAG ]] || [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
 
+  if [[ -n $TRAVIS_TAG ]]; then
+      echo "Not yet ready to publish to Bintray"
+  else
+      ./gradlew publish || EXIT_STATUS=$?
+  fi
+
   ./gradlew docs || EXIT_STATUS=$?
 
   git config --global user.name "$GIT_NAME"
