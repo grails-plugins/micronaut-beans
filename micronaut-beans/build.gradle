@@ -1,0 +1,39 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url "https://repo.grails.org/grails/core" }
+    }
+    dependencies {
+        classpath "org.grails:grails-gradle-plugin:$grailsVersion"
+    }
+}
+
+version pluginVersion
+group 'org.grails.plugins'
+
+apply plugin:"org.grails.grails-plugin"
+apply plugin:"org.grails.grails-plugin-publish"
+
+repositories {
+    mavenLocal()
+    maven { url "https://repo.grails.org/grails/core" }
+}
+
+dependencies {
+    compile "org.grails:grails-core"
+    profile "org.grails.profiles:rest-api-plugin"
+
+    compile "io.micronaut:spring:$micronautVersion"
+}
+
+bootRepackage.enabled = false
+grailsPublish {
+    userOrg = 'grails'
+    githubSlug = 'grails-plugins/micronaut-beans'
+    license {
+        name = 'Apache-2.0'
+    }
+    title = 'Grails Micronaut Beans'
+    desc = 'Grails Plugin For Adding Micronaut Beans To The Spring Application Context'
+    developers = [jeffbrown: "Jeff Scott Brown"]
+}
