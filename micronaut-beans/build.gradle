@@ -17,6 +17,8 @@ apply plugin:"org.grails.grails-plugin-publish"
 repositories {
     mavenLocal()
     maven { url "https://repo.grails.org/grails/core" }
+    maven { url "http://oss.sonatype.org/content/repositories/snapshots/" }
+
 }
 
 dependencies {
