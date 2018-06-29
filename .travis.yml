@@ -1,13 +1,14 @@
 sudo: false
 cache:
   directories:
-  - $HOME/.gradle
+  - "$HOME/.gradle"
 language: groovy
 jdk:
 - openjdk8
 install: true
-script: ./travis-build.sh
+script: "./travis-build.sh"
 env:
   global:
   - GIT_NAME="Jeff Scott Brown"
   - GIT_EMAIL="brownj@objectcomputing.com"
+  - secure: S928hsbY5ymiPdy6QNCEAk1ogZD8kqgR88jxbbmOBibayOhn1okZYrymAzNXKRzJDCr/EOw/DD2yFWLjw+RK+tswOvvyJAskfOnxpW1nejn4cwRUMqpFD5yQYzT21r/2d67B9KgSaShCbFQA8u5l5gUJ8wuBMtqfrmnaX2POqyve+da9CQXUd1sRwwZBthyr3EDcg0T8DA5uZjWJVWZ/1GBT/i8NhZJMr4zkclUg4S9/9XgE+3kvOPDf6kXOmzjxUcBNzjrRcTdz9jrooPrRPfZpZEndZSxQB7yenMF1RgS4YbKmYqEBc0i85tu43SmZQ1lzg+wMClSTQEAXnXgGtKIo6b7Sz7k3Nh6y08Y45ly0N4UKC99R7qegXlbGwNSMc86wyvIg/LsLXj2tyJukmbwRF5wEqZJFeB7WnZ9b5qVencX4/u50bF3hqTCcLgQYbUjcTSMlRs5bW45sFTaBf7wTgE6iiiZvI1Ohe/3Ygr+cb1dTyJzIpCqia4yxgzz/D2gjwlDL+YqpvuWdDIsngWsG7j37RTGkezGEnchoZY99Jdg2iCFD85DQHCzNVP/yZZxJtLGd39XpeX++N3aySI5xXD/rGsyb19H/69/neef0KJYhiIDR3NFj52pMtTkJhgAKfh4o2hnbCqRtju+XnJsMf1JnHOVCZ1CRoV1DoaM=

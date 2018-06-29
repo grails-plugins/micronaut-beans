@@ -37,3 +37,5 @@ grailsPublish {
     desc = 'Grails Plugin For Adding Micronaut Beans To The Spring Application Context'
     developers = [jeffbrown: "Jeff Scott Brown"]
 }
+
+groovydoc.destinationDir = new File(buildDir, 'docs/api')

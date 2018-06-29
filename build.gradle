@@ -1,0 +1,1 @@
+task docs(dependsOn: [':micronaut-beans:groovydoc', ':docs:asciidoctor'])
